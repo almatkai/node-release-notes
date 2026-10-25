@@ -1,0 +1,148 @@
+--- a/src-tauri/src/native_core/extensions/v2_runtime.rs
++++ b/src-tauri/src/native_core/extensions/v2_runtime.rs
+@@ -3,6 +3,14 @@
+     let value = id
+         .strip_prefix("com.tezbar.native.")
+         .or_else(|| id.strip_prefix("raycast."))
++        .or_else(|| {
++            let candidate = id.strip_prefix("com.tezbar.")?;
++            super::v2_catalog::source().iter().any(|m| {
++                m["slug"] == candidate && m["replaces"].as_array().is_some_and(|ids| {
++                    ids.iter().any(|alias| alias == id)
++                })
++            }).then_some(candidate)
++        })
+         .unwrap_or(id);
+     super::v2_catalog::source()
+         .iter()
+--- a/src/renderer/src/raycast-api/detail-runtime.tsx
++++ b/src/renderer/src/raycast-api/detail-runtime.tsx
+@@ -553,7 +553,7 @@
+           </button>
+           <div className="text-[12px] font-semibold text-ink-2">{title}</div>
+           <div className="ml-auto flex items-center gap-1">
+-            <button type="button" className="btn btn-ghost" onClick={onRunPrimaryAction}>
++            <button type="button" className="btn btn-ghost" onClick={() => onRunPrimaryAction()}>
+               Enter
+             </button>
+             <button type="button" className="btn btn-ghost" onClick={onOpenActions}>
+--- a/src/renderer/src/raycast-api/list-runtime.tsx
++++ b/src/renderer/src/raycast-api/list-runtime.tsx
+@@ -17,7 +17,7 @@
+     source?: unknown
+     tintColor?: unknown
+   }
+-  accessories?: Array<{ text?: unknown; tag?: unknown; date?: unknown; icon?: unknown }>
++  accessories?: Array<{ text?: unknown; tag?: unknown; date?: unknown; icon?: unknown; tooltip?: unknown }>
+   detail?: ExtensionRuntimeNode
+   section?: string
+   actionIds?: string[]
+@@ -100,6 +100,7 @@
+       tag: entry.tag,
+       date: entry.date,
+       icon: entry.icon,
++      tooltip: entry.tooltip,
+     }))
+ }
+ 
+@@ -357,6 +358,7 @@
+ 
+   return (
+     <span
++      title={textValue(accessory.tooltip) || undefined}
+       className={
+         isTag
+           ? `max-w-[190px] shrink-0 truncate rounded-[8px] px-2 py-1 text-[11px] font-medium ${colorClass}`
+@@ -530,8 +532,12 @@
+     typeof root.props?.searchText === 'string' ? root.props.searchText : '',
+   )
+   const [selected, setSelected] = useState(0)
++  const controlledAccessoryValue = (() => {
++    const value = (root.props?.searchBarAccessory as ExtensionRuntimeNode | undefined)?.props?.value
++    return typeof value === 'string' ? value : undefined
++  })()
+   const [accessoryValue, setAccessoryValue] = useState(
+-    searchAccessory?.options[0]?.value ?? '',
++    controlledAccessoryValue ?? searchAccessory?.options[0]?.value ?? '',
+   )
+   const [loadingMore, setLoadingMore] = useState(false)
+ 
+@@ -552,11 +558,12 @@
+   useEffect(() => {
+     setAccessoryValue((current) => {
+       if (!searchAccessory || searchAccessory.options.length === 0) return ''
++      if (controlledAccessoryValue !== undefined && searchAccessory.options.some((option) => option.value === controlledAccessoryValue)) return controlledAccessoryValue
+       return searchAccessory.options.some((option) => option.value === current)
+         ? current
+         : searchAccessory.options[0]?.value ?? ''
+     })
+-  }, [searchAccessory])
++  }, [searchAccessory, controlledAccessoryValue])
+ 
+   useEffect(() => {
+     if (query === lastSentQuery.current) return
+--- a/src-tauri/src/native_core/extensions/registry.rs
++++ b/src-tauri/src/native_core/extensions/registry.rs
+@@ -15,6 +15,7 @@
+     slug: String,
+     path: PathBuf,
+     manifest: Value,
++    resource_dir: Option<PathBuf>,
+     data_dir: PathBuf,
+ }
+ 
+@@ -73,9 +74,13 @@
+             };
+             let Ok(slug) = slug(name) else { continue };
+             let native = name.starts_with("com.tezbar.native.");
++            let mut resource_dir = None;
+             let mut manifest = if native {
+                 match super::process_install::resolve(ctx, name) {
+-                    Ok(package) => package.manifest,
++                    Ok(package) => {
++                        resource_dir = Some(package.dir);
++                        package.manifest
++                    },
+                     Err(error) => {
+                         // A damaged canonical directory is NEVER a Raycast package.
+                         let mut value = read_json(&path.join("package.json"))
+@@ -109,6 +114,7 @@
+                 slug,
+                 path,
+                 manifest,
++                resource_dir,
+                 data_dir: ctx.paths.data_dir.clone(),
+             });
+         }
+@@ -244,6 +250,11 @@
+     {
+         return None;
+     }
++    if extension.id.starts_with("com.tezbar.native.") {
++        return extension.resource_dir.as_ref()?.join(relative).is_file().then(|| {
++            extension.resource_dir.as_ref().unwrap().join(relative).to_string_lossy().into_owned()
++        });
++    }
+     let mut candidates = vec![
+         extension.path.join(relative),
+         extension.path.join("assets").join(relative),
+@@ -307,6 +318,11 @@
+         .any(|c| !matches!(c, Component::Normal(_)))
+     {
+         return None;
++    }
++    if extension.id.starts_with("com.tezbar.native.") {
++        return extension.resource_dir.as_ref()?.join(relative).is_file().then(|| {
++            extension.resource_dir.as_ref().unwrap().join(relative).to_string_lossy().into_owned()
++        });
+     }
+     let mut candidates = vec![
+         extension.path.join(relative),
+@@ -576,6 +592,7 @@
+         slug: slug(id)?,
+         path,
+         manifest: Value::Null,
++        resource_dir: None,
+         data_dir: ctx.paths.data_dir.clone(),
+     };
+     let source = preferences_path(&extension)?;

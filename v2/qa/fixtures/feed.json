@@ -1,0 +1,9 @@
+[
+ {"version":"v24.1.0","date":"2025-01-01","lts":false,"isCurrent":false},
+ {"version":"v22.5.0","date":"2024-10-29","lts":"Jod","isCurrent":true},
+ {"version":"v24.0.0","date":"2024-12-31T23:30:00Z","lts":""},
+ {"version":"v22.5.0","date":"invalid","lts":"Jod"},
+ {"version":"v18.2.0","date":""},
+ {"version":"v18.1.0","date":"2020-02-29","lts":"Hydrogen"},
+ {"version":"v20.1.0","date":"2025-01-02","lts":"Iron"}
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "path": "qa/upstream-package.json",
+    "url": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/node-release-notes/package.json",
+    "bytes": 1561,
+    "sha256": "d87ce635dbe6b889c9f29185634872b45992196c4b2f28e01b7570704bdd2d7b",
+    "purpose": "immutable source/dependency provenance; no product API fixture capture"
+  },
+  {
+    "path": "resources/app-icon.png",
+    "url": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/node-release-notes/assets/app-icon.png",
+    "bytes": 14999,
+    "sha256": "4e778503f4f5c797a1b811b1b37bba7b7aeaa8d632b77e9f0b710996a9c48c81",
+    "purpose": "immutable source/dependency provenance; no product API fixture capture"
+  },
+  {
+    "path": "resources/nodejs-icon.svg",
+    "url": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/node-release-notes/assets/nodejs-icon.svg",
+    "bytes": 2509,
+    "sha256": "060358f37b5a2ba741c888adc3b191c0c9f57409a9b823d92a59eaa56d93b4b4",
+    "purpose": "immutable source/dependency provenance; no product API fixture capture"
+  },
+  {
+    "path": "licenses/raycast-extensions-MIT.txt",
+    "url": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/LICENSE",
+    "bytes": 1064,
+    "sha256": "7f727f8b20cdd0e65f84e70b9cac2fce337dcecee4dc88955eb012ea27f02755",
+    "purpose": "immutable source/dependency provenance; no product API fixture capture"
+  },
+  {
+    "path": "qa/utils-package-metadata.json",
+    "url": "https://registry.npmjs.org/@raycast/utils/1.12.5",
+    "bytes": 3073,
+    "sha256": "df3ff7a4991ce001cc0f768744193a6ebe71253c02b25df78ddbc0aa98cd0f38",
+    "purpose": "immutable source/dependency provenance; no product API fixture capture"
+  },
+  {
+    "path": "licenses/r-efi-upstream/AUTHORS",
+    "url": "https://codeload.github.com/r-efi/r-efi/tar.gz/7e1b0322d31d625f81a5656096330934f9cd835d",
+    "archiveMember": "r-efi-7e1b0322d31d625f81a5656096330934f9cd835d/AUTHORS",
+    "bytes": 3733,
+    "sha256": "d027e91dbc9cdbb2f1190068e498bd6b61cff022b6a032b191021ba658d96111",
+    "purpose": "immutable dependency license provenance"
+  }
+]

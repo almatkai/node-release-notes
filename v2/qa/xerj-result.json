@@ -1,0 +1,13 @@
+{
+  "prefix": "ax-977b042514dc",
+  "canonicalRoot": "/Users/almat/Desktop/code/Tezbar APP/rust-extension-ports/node-release-notes",
+  "exitCode": 1,
+  "summary": [
+    "autoindex: ignore rules: skipped 5 files and pruned 4 directories (contents never walked, so not counted); 3 ignore files read",
+    "xerj-done ok=false exit=1 reason=aborted wall=0.3s",
+    "error: project new file v2/Cargo.toml: no frozen dataset accepts family docs, group None, and fields [\"end_line\", \"start_line\", \"text\"]; this requires unsupported dataset/schema evolution (use a new prefix)"
+  ],
+  "log": ".work/xerj-final.txt",
+  "noGlobalRestartOrSchemaChangeOrPrefixBypass": true,
+  "coverage": "Nonzero/junk/skipped means partial overall coverage. Source-file counts in summary are the source coverage evidence."
+}

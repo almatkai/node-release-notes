@@ -1,0 +1,31 @@
+{
+  "host": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "before": {
+    "baseline": true,
+    "mouseEventBug": true,
+    "controlledDropdown": false,
+    "dateTooltip": false,
+    "actualMarkdownSanitized": true,
+    "codeCopyBytes": "<script>copy-this-only</script>\\n",
+    "stubs": [
+      "unrelated form/grid/color",
+      "cosmetic primitives",
+      "capture-only host services"
+    ],
+    "nativeGui": false
+  },
+  "after": {
+    "baseline": false,
+    "mouseEventBug": false,
+    "controlledDropdown": true,
+    "dateTooltip": true,
+    "actualMarkdownSanitized": true,
+    "codeCopyBytes": "<script>copy-this-only</script>\\n",
+    "stubs": [
+      "unrelated form/grid/color",
+      "cosmetic primitives",
+      "capture-only host services"
+    ],
+    "nativeGui": false
+  }
+}
