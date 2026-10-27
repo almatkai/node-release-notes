@@ -1,0 +1,49 @@
+{
+  "buildInputsSha256": {
+    ".cargo/config.toml": "aabd2af12e26033cb8de9b63841b54574718406e4479b47e41bc0d92fc6f14e0",
+    "Cargo.lock": "9c0e9e7a23a55cb981d34a091c7938e9e9845077813c0ace937a51cf6df6cd8f",
+    "Cargo.toml": "973def27f6314528e013c6da89d184722146aac118bd597209b12900af58bb61",
+    "examples/pipe_fixture.rs": "87c8f9c26743258b560c7a8d6eb954dc3a1ccde807dd9017eaec9e48c343f4df",
+    "integration/host_contract.rs": "bf61586b7258637b6eb3f6d2c3a2fce58936ba2ba40cc550d235144952c65096",
+    "qa/fixtures/feed.json": "211037e659f22bd304966cce450e99453617dff33d5b9f4a75139682b32aeae8",
+    "qa/fixtures/localhost-test-cert.pem": "02a7e946c19a2ef295267cc331917d09c97ea7456925e222dc3e9b4e68f6427f",
+    "qa/fixtures/localhost-test-key.pem": "55c492baf2561db0859d7bcce50f69187886e34f2e2608b3d8455da4befc8ddb",
+    "qa/fixtures/malicious-release.json": "d76855cca6b8df19e84d61e0d4c416b21245e723d199e4ad42e00ed5961770c3",
+    "qa/fixtures/release.json": "cfcf14328be9dc3abcba048a7f12af756a9ffa5e83df93bdf5527a5c95cdd198",
+    "qa/oracle-los-angeles.json": "04098ca65edecf8d2339799dcf598175de3795f5eb2e8276f390ceadd8d5bd3f",
+    "qa/oracle-utc.json": "a43907863bf1e38f9b27fe415abbc429b86e1fbd14a58d20da49d31ec5dbee60",
+    "src/cache.rs": "4525f6f2420349691cc08ae6b44359e530a30a011f094cb90fccdb78515de622",
+    "src/http.rs": "31cd67bd27a042ddc3dc93e72c21c964fbe58718f99ef39710ace00c653c9f5a",
+    "src/lib.rs": "d3e1539bc0dcccd6c56969274fe06a25849bed1ed67e333bac23cdf383c3888f",
+    "src/main.rs": "4a2f47fc983a536fa23d7ad461c220ec1e75cf72d7ef6b78177538a67d5ac1d5",
+    "src/model.rs": "92ff4eb15f1db14abf707fd19ca8f0ec317d3fbfc9e69f45f016696a1ceab69c",
+    "src/ui.rs": "07689efb5181ffb18b6fc35ac7d338d4f94059b5d712abae90fdf9e6d477b7e0",
+    "tests/adapter.rs": "a303ca6e67fb2e5f28c745ec87aaf6f8024fa5eac9a012dab43738d1f29fa35c",
+    "tests/host_contract.rs": "a421585b15ff187354f4e40bad502b01a70337a39663f171e16de22cddb880af",
+    "tests/parity.rs": "a8cfab63d5266fc2f2530d69ffb121a8f742e84352d6268300118a68f9bf847c"
+  },
+  "freshCargoHome": true,
+  "isolatedSource": true,
+  "sourceCopiedBeforeBuild": true,
+  "sdkSource": "git+https://github.com/almatkai/tezbar-extension-sdk-rust.git?rev=e955911f0bf5b558f9d3eb5183df0adc95c22af2#e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+  "sdkVersion": "0.1.1",
+  "commands": [
+    [
+      "cargo",
+      "+1.85.0",
+      "build",
+      "--locked",
+      "--release"
+    ],
+    [
+      "cargo",
+      "+1.85.0",
+      "test",
+      "--locked"
+    ]
+  ],
+  "result": "passed",
+  "hostOrSiblingPathDependencies": false,
+  "scope": "Independent Rust build/tests; no host app, GUI or OS service acceptance",
+  "logs": ".work/isolated-1792954508177645000"
+}

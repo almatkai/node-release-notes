@@ -1,0 +1,817 @@
+{
+  "source": "2410143f530d3d6ea7143e25717322acc4af7512",
+  "utils": "1.12.5",
+  "clock": "2025-01-02T00:00:00Z",
+  "locale": "en-US",
+  "timezone": "America/Los_Angeles",
+  "validation": [
+    {
+      "input": null,
+      "error": "Node.js versions is not an array"
+    },
+    {
+      "input": {},
+      "error": "Node.js versions is not an array"
+    },
+    {
+      "input": [],
+      "error": "Node.js versions is empty"
+    },
+    {
+      "input": [
+        null
+      ],
+      "error": "Element of Node.js versions is not an object"
+    },
+    {
+      "input": [
+        []
+      ],
+      "error": "Element of Node.js versions does not have a 'version' property"
+    },
+    {
+      "input": [
+        123
+      ],
+      "error": "Element of Node.js versions is not an object"
+    },
+    {
+      "input": [
+        {}
+      ],
+      "error": "Element of Node.js versions does not have a 'version' property"
+    },
+    {
+      "input": [
+        {
+          "version": 1,
+          "date": ""
+        }
+      ],
+      "error": "Element of Node.js versions does not have a 'version' property"
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": 1
+        }
+      ],
+      "error": "Element of Node.js versions does not have a 'date' property"
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": "",
+          "lts": true
+        }
+      ],
+      "error": "Element of Node.js versions does not have a 'lts' property"
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": "",
+          "lts": null
+        }
+      ],
+      "error": "Element of Node.js versions does not have a 'lts' property"
+    },
+    {
+      "input": [
+        {
+          "version": "",
+          "date": ""
+        }
+      ],
+      "result": true
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": "",
+          "lts": ""
+        }
+      ],
+      "result": true
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": "",
+          "lts": false
+        }
+      ],
+      "result": true
+    },
+    {
+      "input": [
+        {
+          "version": "v1.0.0",
+          "date": ""
+        }
+      ],
+      "result": true
+    }
+  ],
+  "grouping": [
+    [
+      "v24",
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      "v22",
+      [
+        1,
+        3
+      ]
+    ],
+    [
+      "v18",
+      [
+        4,
+        5
+      ]
+    ],
+    [
+      "v20",
+      [
+        6
+      ]
+    ]
+  ],
+  "prototype": [
+    {
+      "version": "__proto__",
+      "error": "(previousValue[sectionTitle] || []).concat is not a function"
+    },
+    {
+      "version": "constructor",
+      "error": "(previousValue[sectionTitle] || []).concat is not a function"
+    },
+    {
+      "version": "toString",
+      "error": "(previousValue[sectionTitle] || []).concat is not a function"
+    }
+  ],
+  "tagged": [
+    {
+      "version": "v24.1.0",
+      "lts": false,
+      "date": "2025-01-01",
+      "tagList": [
+        {
+          "label": "Current",
+          "value": "current",
+          "color": "yellow"
+        },
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "version": "v22.5.0",
+      "lts": "Jod",
+      "date": "2024-10-29",
+      "tagList": [
+        {
+          "label": "LTS: Jod",
+          "value": "lts",
+          "color": "blue"
+        },
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "version": "v24.0.0",
+      "lts": "",
+      "date": "2024-12-31T23:30:00Z",
+      "tagList": [
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "version": "v22.5.0",
+      "lts": "Jod",
+      "date": "invalid",
+      "tagList": [
+        {
+          "label": "LTS: Jod",
+          "value": "lts",
+          "color": "blue"
+        },
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "version": "v18.2.0",
+      "date": "",
+      "tagList": [
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "version": "v18.1.0",
+      "lts": "Hydrogen",
+      "date": "2020-02-29",
+      "tagList": [
+        {
+          "label": "LTS: Hydrogen",
+          "value": "lts",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "version": "v20.1.0",
+      "lts": "Iron",
+      "date": "2025-01-02",
+      "tagList": [
+        {
+          "label": "LTS: Iron",
+          "value": "lts",
+          "color": "blue"
+        },
+        {
+          "label": "Latest",
+          "value": "latest",
+          "color": "green"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "title": "v24.1.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "current",
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "Current",
+            "color": "yellow"
+          }
+        },
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {
+          "text": {
+            "value": "12/31/24"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "December 31, 2024"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v24.1.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v24.1.0"
+        }
+      ]
+    },
+    {
+      "title": "v22.5.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "lts",
+        "jod",
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "LTS: Jod",
+            "color": "blue"
+          }
+        },
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {
+          "text": {
+            "value": "10/28/24"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "October 28, 2024"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v22.5.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v22.5.0"
+        }
+      ]
+    },
+    {
+      "title": "v24.0.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {
+          "text": {
+            "value": "12/31/24"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "December 31, 2024"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v24.0.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v24.0.0"
+        }
+      ]
+    },
+    {
+      "title": "v22.5.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "lts",
+        "jod",
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "LTS: Jod",
+            "color": "blue"
+          }
+        },
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {
+          "text": {
+            "value": "Invalid Date"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "Invalid Date"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v22.5.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v22.5.0"
+        }
+      ]
+    },
+    {
+      "title": "v18.2.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {}
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v18.2.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v18.2.0"
+        }
+      ]
+    },
+    {
+      "title": "v18.1.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "lts",
+        "hydrogen"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "LTS: Hydrogen",
+            "color": "blue"
+          }
+        },
+        {
+          "text": {
+            "value": "2/28/20"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "February 28, 2020"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v18.1.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v18.1.0"
+        }
+      ]
+    },
+    {
+      "title": "v20.1.0",
+      "icon": "nodejs-icon.svg",
+      "keywords": [
+        "lts",
+        "iron",
+        "latest"
+      ],
+      "accessories": [
+        {
+          "tag": {
+            "value": "LTS: Iron",
+            "color": "blue"
+          }
+        },
+        {
+          "tag": {
+            "value": "Latest",
+            "color": "green"
+          }
+        },
+        {
+          "text": {
+            "value": "1/1/25"
+          },
+          "icon": "Icon.Calendar",
+          "tooltip": "January 1, 2025"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Push",
+          "title": "Show Release Notes for v20.1.0"
+        },
+        {
+          "type": "Action.CopyToClipboard",
+          "title": "Copy Version",
+          "content": "v20.1.0"
+        }
+      ]
+    }
+  ],
+  "views": {
+    "latest": [
+      {
+        "title": "Latest",
+        "versions": [
+          "v24.1.0",
+          "v22.5.0",
+          "v18.2.0",
+          "v20.1.0"
+        ]
+      }
+    ],
+    "lts": [
+      {
+        "title": "v22",
+        "versions": [
+          "v22.5.0",
+          "v22.5.0"
+        ]
+      },
+      {
+        "title": "v18",
+        "versions": [
+          "v18.1.0"
+        ]
+      },
+      {
+        "title": "v20",
+        "versions": [
+          "v20.1.0"
+        ]
+      }
+    ],
+    "": [
+      {
+        "title": "v24",
+        "versions": [
+          "v24.1.0",
+          "v24.0.0"
+        ]
+      },
+      {
+        "title": "v22",
+        "versions": [
+          "v22.5.0",
+          "v22.5.0"
+        ]
+      },
+      {
+        "title": "v18",
+        "versions": [
+          "v18.2.0",
+          "v18.1.0"
+        ]
+      },
+      {
+        "title": "v20",
+        "versions": [
+          "v20.1.0"
+        ]
+      }
+    ]
+  },
+  "detail": {
+    "markdown": "# v24.1.0\n## Release Name: \nNode v24.1.0\n\n## Changes\n\nSafe **notes**.\n\n```js\nconsole.log('node');\n```",
+    "navigationTitle": "Details for Node v24.1.0",
+    "metadata": [
+      {
+        "type": "Detail.Metadata.Label",
+        "title": "Published",
+        "text": "1/1/2025, 3:59:58 PM"
+      },
+      {
+        "type": "Detail.Metadata.Link",
+        "title": "Release Notes URL",
+        "text": "https://github.com/nodejs/node/releases/tag/v24.1.0",
+        "target": "https://github.com/nodejs/node/releases/tag/v24.1.0"
+      },
+      {
+        "type": "Detail.Metadata.Link",
+        "title": "Docs",
+        "text": "https://nodejs.org/docs/v24.1.0/api/",
+        "target": "https://nodejs.org/docs/v24.1.0/api/"
+      },
+      {
+        "type": "Detail.Metadata.Separator"
+      },
+      {
+        "type": "Detail.Metadata.TagList",
+        "title": "Tags"
+      },
+      {
+        "type": "Detail.Metadata.TagList.Item",
+        "text": "Current"
+      },
+      {
+        "type": "Detail.Metadata.TagList.Item",
+        "text": "Latest"
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenInBrowser",
+        "title": "Open Release Notes",
+        "url": "https://github.com/nodejs/node/releases/tag/v24.1.0"
+      },
+      {
+        "type": "Action.OpenInBrowser",
+        "title": "Open Docs",
+        "url": "https://nodejs.org/docs/v24.1.0/api/"
+      },
+      {
+        "type": "Action.CopyToClipboard",
+        "title": "Copy Version",
+        "content": "v24.1.0"
+      },
+      {
+        "type": "Action.CopyToClipboard",
+        "title": "Copy Release Notes URL",
+        "content": "https://github.com/nodejs/node/releases/tag/v24.1.0"
+      },
+      {
+        "type": "Action.CopyToClipboard",
+        "title": "Copy Docs URL",
+        "content": "https://nodejs.org/docs/v24.1.0/api/"
+      }
+    ]
+  },
+  "detailError": {
+    "markdown": "# v22.5.0\n## Release Name: \n\n\nNot Found",
+    "hasActions": false,
+    "hasMetadata": false
+  },
+  "docs": [
+    "https://nodejs.org/docs/v24.1.0/api/",
+    "https://nodejs.org/docs/v22.5.0/api/",
+    "https://nodejs.org/docs/v24.0.0/api/",
+    "https://nodejs.org/docs/v22.5.0/api/",
+    "https://nodejs.org/docs/v18.2.0/api/",
+    "https://nodejs.org/docs/v18.1.0/api/",
+    "https://nodejs.org/docs/v20.1.0/api/"
+  ],
+  "filterValues": [
+    {
+      "value": null,
+      "valid": false
+    },
+    {
+      "value": true,
+      "valid": false
+    },
+    {
+      "value": "",
+      "valid": true
+    },
+    {
+      "value": "latest",
+      "valid": true
+    },
+    {
+      "value": "lts",
+      "valid": true
+    },
+    {
+      "value": "all",
+      "valid": false
+    }
+  ],
+  "searchSeam": "Raycast client matching is not executable here. Rows supply actual title and tag-label keywords; native uses case-insensitive substring over those fields.",
+  "requests": [
+    {
+      "url": "https://nodejs.org/dist/index.json",
+      "signal": true
+    },
+    {
+      "url": "https://nodejs.org/dist/index.json",
+      "signal": true
+    },
+    {
+      "url": "https://nodejs.org/dist/index.json",
+      "signal": true
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/releases/tags/v24.1.0",
+      "signal": true
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/releases/tags/v22.5.0",
+      "signal": true
+    }
+  ],
+  "cacheBehavior": "Cache is cross-mount in this in-memory API seam; every mount revalidates; keepPreviousData keeps prior feed on failure; toast provides deliberate Retry; no TTL or polling in useFetch.",
+  "boundaries": [
+    [
+      "denied",
+      "fs"
+    ],
+    [
+      "denied",
+      "node:fs"
+    ],
+    [
+      "denied",
+      "fs/promises"
+    ],
+    [
+      "denied",
+      "os"
+    ],
+    [
+      "denied",
+      "child_process"
+    ],
+    [
+      "denied",
+      "http"
+    ],
+    [
+      "denied",
+      "https"
+    ],
+    [
+      "denied",
+      "net"
+    ],
+    [
+      "denied",
+      "tls"
+    ],
+    [
+      "denied",
+      "dns"
+    ],
+    [
+      "denied",
+      "worker_threads"
+    ],
+    [
+      "denied",
+      "process"
+    ],
+    [
+      "denied",
+      "module"
+    ],
+    [
+      "fetch",
+      "https://nodejs.org/dist/index.json"
+    ],
+    [
+      "cache.set",
+      "9427d6f4fce213e1c6ca5d077cb4cb041648d17d",
+      "c4fa61c483f9c4c2d2b82096bd2ae259770ecd17"
+    ],
+    [
+      "fetch",
+      "https://nodejs.org/dist/index.json"
+    ],
+    [
+      "toast",
+      "Internal Server Error"
+    ],
+    [
+      "fetch",
+      "https://nodejs.org/dist/index.json"
+    ],
+    [
+      "cache.set",
+      "9427d6f4fce213e1c6ca5d077cb4cb041648d17d",
+      "c4fa61c483f9c4c2d2b82096bd2ae259770ecd17"
+    ],
+    [
+      "fetch",
+      "https://api.github.com/repos/nodejs/node/releases/tags/v24.1.0"
+    ],
+    [
+      "cache.set",
+      "9427d6f4fce213e1c6ca5d077cb4cb041648d17d",
+      "b5e3105b08742834f6290601888d1bc130e5ba17"
+    ],
+    [
+      "fetch",
+      "https://api.github.com/repos/nodejs/node/releases/tags/v22.5.0"
+    ],
+    [
+      "toast",
+      "Not Found"
+    ]
+  ]
+}

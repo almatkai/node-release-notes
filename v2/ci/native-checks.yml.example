@@ -1,0 +1,36 @@
+# INACTIVE TEMPLATE. This file is intentionally outside .github/workflows.
+# Parent must review, pin CI actions to immutable approved revisions, and enable
+# deliberately. Preprovision native runners with Rust stable/1.85, Clippy/rustfmt,
+# MSVC on Windows, and OS timezone UTC (TZ alone does not set Windows OS time).
+# No publishing/upload/installation/catalog steps are included.
+name: Native Node Release Notes verification
+on: [workflow_dispatch]
+jobs:
+  native:
+    strategy:
+      matrix:
+        include:
+          - os: [self-hosted, macOS, ARM64]
+            target: aarch64-apple-darwin
+          - os: [self-hosted, Windows, X64]
+            target: x86_64-pc-windows-msvc
+    runs-on: ${{ matrix.os }}
+    env:
+      TZ: UTC
+    steps:
+      - uses: actions/checkout@v4 # replace with parent-approved immutable pin
+      - name: Toolchain already provisioned on runner
+        run: rustup show
+      - run: cargo test --manifest-path v2/Cargo.toml --locked --all-targets
+      - run: cargo fmt --manifest-path v2/Cargo.toml --check
+      - run: cargo clippy --manifest-path v2/Cargo.toml --locked --all-targets -- -D warnings
+      - run: cargo build --manifest-path v2/Cargo.toml --locked --release --target ${{ matrix.target }}
+  msrv:
+    runs-on: [self-hosted, macOS, ARM64]
+    env:
+      TZ: UTC
+    steps:
+      - uses: actions/checkout@v4 # replace with parent-approved immutable pin
+      - name: Requires preprovisioned Rust 1.85.0
+        run: cargo +1.85.0 test --manifest-path v2/Cargo.toml --locked --all-targets
+      - run: cargo +1.85.0 clippy --manifest-path v2/Cargo.toml --locked --all-targets -- -D warnings

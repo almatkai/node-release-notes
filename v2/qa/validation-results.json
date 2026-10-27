@@ -1,0 +1,304 @@
+{
+  "source": "2410143f530d3d6ea7143e25717322acc4af7512",
+  "sdk": "e955911f0bf5b558f9d3eb5183df0adc95c22af2",
+  "host": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "tools": {
+    "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)",
+    "node": "v26.7.0",
+    "npm": "12.0.2",
+    "python3": "Python 3.9.6"
+  },
+  "checks": [
+    {
+      "name": "source-oracle-utc",
+      "command": [
+        "node",
+        "v2/qa/source-oracle.cjs"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/source-oracle-utc.txt",
+      "logSha256": "43b7a89550f39aa589d183d30b6ed57fe01ac46e00f95ea4af33ba29a8917f32"
+    },
+    {
+      "name": "source-oracle-los-angeles",
+      "command": [
+        "node",
+        "v2/qa/source-oracle.cjs"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/source-oracle-los-angeles.txt",
+      "logSha256": "48c3ec928076e297cecebc0b2ac41f2532e21e051b33e01f45631d980b72790d"
+    },
+    {
+      "name": "stable-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--all-targets"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/stable-tests.txt",
+      "logSha256": "f95021702ed6ee2487aa8e3fdac7dde1e8ca18973bbf25fd99922f6fd9d967cf"
+    },
+    {
+      "name": "msrv-tests",
+      "command": [
+        "cargo",
+        "+1.85.0",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--all-targets"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/msrv-tests.txt",
+      "logSha256": "f53fbfccaf7905c839b04c274973b504a66452fabab5c4c611d21120fbd2be8f"
+    },
+    {
+      "name": "timezone-parity",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--test",
+        "parity"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/timezone-parity.txt",
+      "logSha256": "516ae758f38fc4cb4c67d071b4784b863f90df359f53072179572b10380e313c"
+    },
+    {
+      "name": "fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--check"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/fmt.txt",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "stable-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/stable-clippy.txt",
+      "logSha256": "2309fc7ede1cc3506d516ddd754a07b806575fa8f06f79b710a4bb868fbd3cf3"
+    },
+    {
+      "name": "msrv-clippy",
+      "command": [
+        "cargo",
+        "+1.85.0",
+        "clippy",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/msrv-clippy.txt",
+      "logSha256": "caf71086bdf964ab7dae42194adbd2d01136bc03b1dfae5f8c55b994d1261de5"
+    },
+    {
+      "name": "sdk-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "v2/.work/sdk/Cargo.toml"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/sdk-tests.txt",
+      "logSha256": "f92f091cadcf6b84adcef28bd4e6d62674d4f03f049afd657bde1305f2dad04d"
+    },
+    {
+      "name": "v1-tests",
+      "command": [
+        "npm",
+        "test",
+        "--prefix",
+        "v2/.work/v1"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/v1-tests.txt",
+      "logSha256": "a218fc52db22ed7d80a82f7bd18fe2b037a966f6150ff6195050a7bfc862ce2f"
+    },
+    {
+      "name": "v1-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck",
+        "--prefix",
+        "v2/.work/v1"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/v1-typecheck.txt",
+      "logSha256": "c398ed672aa0ae5770a4e2a42f5fa97a41e1026ad9560136ce96efcd5becd434"
+    },
+    {
+      "name": "fixture-executable",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--examples"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/fixture-executable.txt",
+      "logSha256": "b327d29a3ee83852f14377014827577b3cbbf9de841d1480cad7095d20554027"
+    },
+    {
+      "name": "jsonl-pipes",
+      "command": [
+        "python3",
+        "v2/qa/pipes.py"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/jsonl-pipes.txt",
+      "logSha256": "26ce81ca018863cbdd204b44d8ead05334ab4d5e2186252ef114e1d4a0908989"
+    },
+    {
+      "name": "actual-renderer",
+      "command": [
+        "node",
+        "v2/qa/renderer.cjs"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/actual-renderer.txt",
+      "logSha256": "f7c0296ae1cc170dc28a0c3c2a23d3829ade8e264b82280e457e88c128715b35"
+    },
+    {
+      "name": "actual-json-schema",
+      "command": [
+        "node",
+        "v2/qa/schema.cjs"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/actual-json-schema.txt",
+      "logSha256": "4ede40c515c5ca9b06d98960483017fe28d81264eecec5c4c4054ac02312abdf"
+    },
+    {
+      "name": "host-patch-check",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "--directory=v2/.work/host",
+        "v2/integration/host-prerequisites.patch"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/host-patch-check.txt",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "arm64-release",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--release",
+        "--target",
+        "aarch64-apple-darwin"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/arm64-release.txt",
+      "logSha256": "17b0bf9f52cb273da0c211c9aff3fcec85fa97c716304a5c055324fbebd63204"
+    },
+    {
+      "name": "deterministic-package",
+      "command": [
+        "python3",
+        "v2/qa/package.py"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/deterministic-package.txt",
+      "logSha256": "0ca4e43918e23b7fffc6c48cf4d9ec3aa1b8264ec3a046af23dc130a9e1c9303"
+    },
+    {
+      "name": "actual-extracted-inventory",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "v2/Cargo.toml",
+        "--test",
+        "host_contract",
+        "extracted_package",
+        "--",
+        "--ignored"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".work/validation/actual-extracted-inventory.txt",
+      "logSha256": "212eb661d1bce32de6020fe53caba60b42501a7dcb32bd2e9fd440bfb17ac2ef"
+    }
+  ],
+  "windowsGNU": [
+    {
+      "name": "windows-check",
+      "status": "blocked",
+      "reason": "ring C compilation: x86_64-w64-mingw32-gcc absent; no tools installed",
+      "sha256": "a3a8c1dd25f48cb9670e0ee2362f6aba343acce99f4fc800497d625c152e832f"
+    },
+    {
+      "name": "windows-clippy",
+      "status": "blocked",
+      "reason": "ring C compilation: x86_64-w64-mingw32-gcc absent; no tools installed",
+      "sha256": "16acbf99815a75abfd336a0a9a3258fd298fd202ef07b7ac61d76eb2e8fb1dee"
+    }
+  ],
+  "nativeMacGuiBrowserClipboard": "not-run",
+  "nativeWindowsMSVCGuiBrowserClipboard": "not-run",
+  "publicProductEndpointQAQueries": 0,
+  "realClipboardBrowserEffects": 0,
+  "installed": false,
+  "finiteCoverage": true
+}

@@ -1,0 +1,222 @@
+{
+  "source": "2410143f530d3d6ea7143e25717322acc4af7512",
+  "unchangedExceptReadmeLink": true,
+  "files": [
+    {
+      "path": ".eslintrc.json",
+      "sourceBytes": 46,
+      "sourceSha256": "739c28ed0495cec767903956a808561ca22d332ecb214ce609d63a82b678d516",
+      "currentBytes": 46,
+      "currentSha256": "739c28ed0495cec767903956a808561ca22d332ecb214ce609d63a82b678d516",
+      "exception": null
+    },
+    {
+      "path": ".gitignore",
+      "sourceBytes": 68,
+      "sourceSha256": "b027adcbb6131ef49be335e9a699657351ca3d5bb2b474379634d1714f5a585b",
+      "currentBytes": 68,
+      "currentSha256": "b027adcbb6131ef49be335e9a699657351ca3d5bb2b474379634d1714f5a585b",
+      "exception": null
+    },
+    {
+      "path": ".nvmrc",
+      "sourceBytes": 3,
+      "sourceSha256": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+      "currentBytes": 3,
+      "currentSha256": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+      "exception": null
+    },
+    {
+      "path": ".prettierrc",
+      "sourceBytes": 47,
+      "sourceSha256": "05ff822ce3e9ec1aa69775f1fd901d3fa8a44b0ab22f54d8dcc6a01e1f0c1c6f",
+      "currentBytes": 47,
+      "currentSha256": "05ff822ce3e9ec1aa69775f1fd901d3fa8a44b0ab22f54d8dcc6a01e1f0c1c6f",
+      "exception": null
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sourceBytes": 68,
+      "sourceSha256": "ea4ab9a76c18770e38a95eea370e7ad3135af81a87922c99eab704ffbf9fcb71",
+      "currentBytes": 68,
+      "currentSha256": "ea4ab9a76c18770e38a95eea370e7ad3135af81a87922c99eab704ffbf9fcb71",
+      "exception": null
+    },
+    {
+      "path": "LICENSE",
+      "sourceBytes": 1087,
+      "sourceSha256": "1d7dbdbcd4fe14dfa08334fab20bffad23c1290f195792a3a4420dadf9912f81",
+      "currentBytes": 1087,
+      "currentSha256": "1d7dbdbcd4fe14dfa08334fab20bffad23c1290f195792a3a4420dadf9912f81",
+      "exception": null
+    },
+    {
+      "path": "README.md",
+      "sourceBytes": 298,
+      "sourceSha256": "385632469f6489bfb4783d8df4ca6e1604cae26f3c55e5b161a6e935f9871ef9",
+      "currentBytes": 361,
+      "currentSha256": "a1fa23a6f392da4037dae4bfdeb038bc3827276109b7a1eb0ae54756b664af32",
+      "exception": "one discovery link"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sourceBytes": 14999,
+      "sourceSha256": "4e778503f4f5c797a1b811b1b37bba7b7aeaa8d632b77e9f0b710996a9c48c81",
+      "currentBytes": 14999,
+      "currentSha256": "4e778503f4f5c797a1b811b1b37bba7b7aeaa8d632b77e9f0b710996a9c48c81",
+      "exception": null
+    },
+    {
+      "path": "assets/nodejs-icon.svg",
+      "sourceBytes": 2509,
+      "sourceSha256": "060358f37b5a2ba741c888adc3b191c0c9f57409a9b823d92a59eaa56d93b4b4",
+      "currentBytes": 2509,
+      "currentSha256": "060358f37b5a2ba741c888adc3b191c0c9f57409a9b823d92a59eaa56d93b4b4",
+      "exception": null
+    },
+    {
+      "path": "metadata/screenshot-1.png",
+      "sourceBytes": 292745,
+      "sourceSha256": "4ac308f92e2e4851e632b1c1fd02732fe7e455ca524cdbd6b9b4a986b54e578f",
+      "currentBytes": 292745,
+      "currentSha256": "4ac308f92e2e4851e632b1c1fd02732fe7e455ca524cdbd6b9b4a986b54e578f",
+      "exception": null
+    },
+    {
+      "path": "metadata/screenshot-2.png",
+      "sourceBytes": 286719,
+      "sourceSha256": "188db59f39971c23085e2e57ce8f706ee0349692e953dfc867846b4ee0ef2ddc",
+      "currentBytes": 286719,
+      "currentSha256": "188db59f39971c23085e2e57ce8f706ee0349692e953dfc867846b4ee0ef2ddc",
+      "exception": null
+    },
+    {
+      "path": "metadata/screenshot-3.png",
+      "sourceBytes": 306271,
+      "sourceSha256": "fa998df90cf5d07e988643c81c7a74008043b57575f3373da7af0b91997a5c79",
+      "currentBytes": 306271,
+      "currentSha256": "fa998df90cf5d07e988643c81c7a74008043b57575f3373da7af0b91997a5c79",
+      "exception": null
+    },
+    {
+      "path": "package-lock.json",
+      "sourceBytes": 73702,
+      "sourceSha256": "82b58b238534e92a5abd7752d2b2e38179565144ef4d561abb7a1ca6fcf7b415",
+      "currentBytes": 73702,
+      "currentSha256": "82b58b238534e92a5abd7752d2b2e38179565144ef4d561abb7a1ca6fcf7b415",
+      "exception": null
+    },
+    {
+      "path": "package.json",
+      "sourceBytes": 2032,
+      "sourceSha256": "32124765759eb251c389c3d05425f7c9249de268a337b02a8330feb1103763dc",
+      "currentBytes": 2032,
+      "currentSha256": "32124765759eb251c389c3d05425f7c9249de268a337b02a8330feb1103763dc",
+      "exception": null
+    },
+    {
+      "path": "raycast-env.d.ts",
+      "sourceBytes": 647,
+      "sourceSha256": "69f21c35eda9ce3c635ab53d2224932e4b6b2fade691271bb54d9875283e6333",
+      "currentBytes": 647,
+      "currentSha256": "69f21c35eda9ce3c635ab53d2224932e4b6b2fade691271bb54d9875283e6333",
+      "exception": null
+    },
+    {
+      "path": "src/components/NodeReleaseDetail.tsx",
+      "sourceBytes": 2156,
+      "sourceSha256": "109b0ba9f3d50381d5b2d4e2f29bd69a8b0e9ccdcb87b3f07759e5f439fad1ef",
+      "currentBytes": 2156,
+      "currentSha256": "109b0ba9f3d50381d5b2d4e2f29bd69a8b0e9ccdcb87b3f07759e5f439fad1ef",
+      "exception": null
+    },
+    {
+      "path": "src/components/NodeVersionListItem.tsx",
+      "sourceBytes": 1331,
+      "sourceSha256": "623474e803e96da03e59f64d82983fd245c8713a7a947fa85d4ec279a6e1a8ef",
+      "currentBytes": 1331,
+      "currentSha256": "623474e803e96da03e59f64d82983fd245c8713a7a947fa85d4ec279a6e1a8ef",
+      "exception": null
+    },
+    {
+      "path": "src/config/index.ts",
+      "sourceBytes": 532,
+      "sourceSha256": "970e9aff01b6d0590ade34234473d8d35e4809713fec819c35939240a59d3cda",
+      "currentBytes": 532,
+      "currentSha256": "970e9aff01b6d0590ade34234473d8d35e4809713fec819c35939240a59d3cda",
+      "exception": null
+    },
+    {
+      "path": "src/helpers/index.ts",
+      "sourceBytes": 1582,
+      "sourceSha256": "4690068905b1c450b0d911472b2bea20dabf5309757379060210d336496569a6",
+      "currentBytes": 1582,
+      "currentSha256": "4690068905b1c450b0d911472b2bea20dabf5309757379060210d336496569a6",
+      "exception": null
+    },
+    {
+      "path": "src/hooks/useFetchNodeVersions/index.ts",
+      "sourceBytes": 1677,
+      "sourceSha256": "d6bc63ec055064896bcc7bed19cea7782c8f3b2d9d949ef6556cb6b84d5e1e48",
+      "currentBytes": 1677,
+      "currentSha256": "d6bc63ec055064896bcc7bed19cea7782c8f3b2d9d949ef6556cb6b84d5e1e48",
+      "exception": null
+    },
+    {
+      "path": "src/hooks/useFetchNodeVersions/types.ts",
+      "sourceBytes": 256,
+      "sourceSha256": "05acb6957c8b4576770a4f78eda8595ecadb169fd08cdc296bb22d866970a421",
+      "currentBytes": 256,
+      "currentSha256": "05acb6957c8b4576770a4f78eda8595ecadb169fd08cdc296bb22d866970a421",
+      "exception": null
+    },
+    {
+      "path": "src/hooks/useFetchNodeVersions/validators.ts",
+      "sourceBytes": 1091,
+      "sourceSha256": "d252c9310465070ccb876ef589f6fd9a8bddcd23edee38259de795e68e690cb8",
+      "currentBytes": 1091,
+      "currentSha256": "d252c9310465070ccb876ef589f6fd9a8bddcd23edee38259de795e68e690cb8",
+      "exception": null
+    },
+    {
+      "path": "src/hooks/useReleaseNotes.ts",
+      "sourceBytes": 308,
+      "sourceSha256": "5620c8c78e3b4f61147a0bc162c30acac91daea5df36ee827bdf9c09363effe6",
+      "currentBytes": 308,
+      "currentSha256": "5620c8c78e3b4f61147a0bc162c30acac91daea5df36ee827bdf9c09363effe6",
+      "exception": null
+    },
+    {
+      "path": "src/index.tsx",
+      "sourceBytes": 2129,
+      "sourceSha256": "72a20e8f95847341d1dc173ef19c3bc9a6f6e1c9272f18d45f2e41950743a0f1",
+      "currentBytes": 2129,
+      "currentSha256": "72a20e8f95847341d1dc173ef19c3bc9a6f6e1c9272f18d45f2e41950743a0f1",
+      "exception": null
+    },
+    {
+      "path": "src/types/index.ts",
+      "sourceBytes": 362,
+      "sourceSha256": "3400690218d9ae5ab4298cbf0f4c93733c513a93667752a3e6192b1c73dd631b",
+      "currentBytes": 362,
+      "currentSha256": "3400690218d9ae5ab4298cbf0f4c93733c513a93667752a3e6192b1c73dd631b",
+      "exception": null
+    },
+    {
+      "path": "test/smoke.test.ts",
+      "sourceBytes": 460,
+      "sourceSha256": "aa99882b472b56524ddd0d0ad0cda563a4f1164a0c44e9db69d3cc34b3520c8f",
+      "currentBytes": 460,
+      "currentSha256": "aa99882b472b56524ddd0d0ad0cda563a4f1164a0c44e9db69d3cc34b3520c8f",
+      "exception": null
+    },
+    {
+      "path": "tsconfig.json",
+      "sourceBytes": 525,
+      "sourceSha256": "bb151e8c2e5442f6f9e42b27c08d88b0f7d2c5c127268ce0aedab2ef964b1eee",
+      "currentBytes": 525,
+      "currentSha256": "bb151e8c2e5442f6f9e42b27c08d88b0f7d2c5c127268ce0aedab2ef964b1eee",
+      "exception": null
+    }
+  ]
+}

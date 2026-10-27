@@ -1,0 +1,28 @@
+{
+  "host": "ea100cee3f69711de12485ba061950c5fc65258f",
+  "sourceManifestAccepted": true,
+  "emptyDevelopmentArtifactsAccepted": true,
+  "canonicalId": "com.tezbar.native.node-release-notes",
+  "replaces": [
+    "com.tezbar.node-release-notes",
+    "raycast.node-release-notes"
+  ],
+  "minimalGrants": [
+    "clipboard.write",
+    "shell.open"
+  ],
+  "negativeCases": [
+    "schemaVersion",
+    "id",
+    "runtime",
+    "execution",
+    "protocolVersion",
+    "replaces",
+    "capabilities",
+    "artifacts",
+    "files",
+    "duplicate replacement",
+    "fake artifact"
+  ],
+  "acquisition": "Not installable until publication and trusted real URL/digest pins"
+}

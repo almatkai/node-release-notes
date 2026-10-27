@@ -1,0 +1,19 @@
+{
+ "schemaVersion":3,
+ "id":"com.tezbar.native.node-release-notes",
+ "slug":"node-release-notes",
+ "name":"Node Release Notes",
+ "version":"2.0.0",
+ "author":"fil; almatkai (Tezbar port)",
+ "description":"Browse Node.js versions, release notes and API documentation.",
+ "repository":"https://github.com/almatkai/node-release-notes",
+ "icon":"resources/app-icon.png",
+ "runtime":"rust","execution":"process","protocolVersion":1,
+ "platforms":["macOS","Windows"],
+ "commands":[{"name":"index","title":"Node Versions","description":"Quickly browse and access detailed information of Node.js versions","mode":"view","runtime":"rust","platforms":["macOS","Windows"],"icon":"resources/app-icon.png","timeoutMs":30000,"refreshMs":null,"concurrency":"serialize"}],
+ "preferences":[],
+ "replaces":["com.tezbar.node-release-notes","raycast.node-release-notes"],
+ "capabilities":["clipboard.write","shell.open"],
+ "verification":[{"platform":"macOS","state":"not-run","note":"Native ARM64 process/packaging tested; real GUI/browser/clipboard acceptance remains not-run."},{"platform":"Windows","state":"not-run","note":"Native MSVC and real GUI/browser/clipboard acceptance remain not-run."}],
+ "files":{},"artifacts":{}
+}

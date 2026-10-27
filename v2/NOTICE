@@ -1,0 +1,36 @@
+Node Release Notes native executable port, version 2.0.0.
+
+Original extension author: fil, from raycast/extensions commit
+6734d85992290066fd31a7f5bee3cca3d3545a1a, extensions/node-release-notes.
+That pinned manifest has no contributors field. It is preserved in
+qa/upstream-package.json. Original Raycast extensions MIT notice is preserved
+in licenses/raycast-extensions-MIT.txt. Both original offline icons are copied
+byte-for-byte at this commit, without conversion.
+
+Tezbar V1 author: almatkai. Own implementation source:
+almatkai/node-release-notes commit 2410143f530d3d6ea7143e25717322acc4af7512.
+Own Git src history credits Almat <kairatovalmat@gmail.com> (0d3ce9b).
+licenses/own-LICENSE.txt preserves the exact V1 LICENSE bytes, including its
+literal backslash-n formatting. LICENSE contains the readable MIT text for
+this port; V1 LICENSE was not edited.
+
+Independent tezbar-extension-sdk 0.1.1 is pinned to HTTPS Git revision
+e955911f0bf5b558f9d3eb5183df0adc95c22af2, Apache-2.0. Its original LICENSE and
+NOTICE are preserved in licenses/sdk-LICENSE.txt and licenses/sdk-NOTICE.txt.
+
+Rust dependencies: exact versions, sources, declared SPDX expressions, actual
+license/notice/copyright/authors files and their hashes are recorded in
+licenses/cargo-licenses.json and licenses/cargo/**. This superset includes
+build/dev/target-only dependencies; it does not imply all are linked on ARM64.
+r-efi's original AUTHORS contains its full MIT permission and copyright notice.
+
+QA only: @raycast/utils 1.12.5 is executed from the exact V1 lock. Published npm
+metadata (qa/utils-package-metadata.json) declares MIT but its tarball omits a
+license text. Its published gitHead is recorded; attempted immutable public
+license URLs returned 404. Utility source/dependencies are not redistributed in
+the executable package. Source oracle captures API/React/cache seams explicitly.
+
+Host integration extracts/patches are based solely on committed Tezbar baseline
+ea100cee3f69711de12485ba061950c5fc65258f, Apache-2.0. Its license is preserved
+in licenses/host-Apache-2.0.txt. No host working files or sibling default SDK
+branch contribute to this build. No upstream, SDK, or host endorsement implied.
